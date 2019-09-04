@@ -1,7 +1,7 @@
 Coding Guidelines for C# (up to version 7.3)
 ================
 
-See the landing page at https://www.csharpcodingguidelines.com
+These guidelines have been customized for the Degreed API team.
 
 ## How to create the PDFs
 
