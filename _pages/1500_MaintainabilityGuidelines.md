@@ -7,8 +7,8 @@ sidebar:
   nav: "sidebar"
 ---
 
-### <a name="av1500"></a> Methods should not exceed 7 statements (AV1500) ![](/assets/images/1.png)
-A method that requires more than 7 statements is simply doing too much or has too many responsibilities. It also requires the human mind to analyze the exact statements to understand what the code is doing. Break it down into multiple small and focused methods with self-explaining names, but make sure the high-level algorithm is still clear.
+### <a name="av1500"></a> Methods should not exceed 12 statements (AV1500) ![](/assets/images/1.png)
+A method that requires more than 12 statements is simply doing too much or has too many responsibilities. It also requires the human mind to analyze the exact statements to understand what the code is doing. Break it down into multiple small and focused methods with self-explaining names, but make sure the high-level algorithm is still clear.
 
 ### <a name="av1501"></a> Make all members `private` and types `internal sealed` by default (AV1501) ![](/assets/images/1.png)
 To make a more conscious decision on which members to make available to other classes, first restrict the scope as much as possible. Then carefully decide what to expose as a public member or type.
@@ -193,53 +193,6 @@ Please note that this also avoids possible confusion in statements of the form:
 		}  
 	}
 
-### <a name="av1536"></a> Always add a `default` block after the last `case` in a `switch` statement (AV1536) ![](/assets/images/1.png)
-Add a descriptive comment if the `default` block is supposed to be empty. Moreover, if that block is not supposed to be reached throw an `InvalidOperationException` to detect future changes that may fall through the existing cases. This ensures better code, because all paths the code can travel have been thought about.
-
-	void Foo(string answer)  
-	{  
-		switch (answer)  
-		{  
-			case "no":  
-			{
-			  Console.WriteLine("You answered with No");  
-			  break;
-			}  
-			  
-			case "yes":
-			{  
-			  Console.WriteLine("You answered with Yes");  
-			  break;
-			}
-			
-			default:  
-			{
-			  // Not supposed to end up here.  
-			  throw new InvalidOperationException("Unexpected answer " + answer);
-			}  
-		}  
-	}
-
-### <a name="av1537"></a> Finish every `if`-`else`-`if` statement with an `else` clause (AV1537) ![](/assets/images/2.png)
-For example:
-
-	void Foo(string answer)  
-	{  
-		if (answer == "no")  
-		{  
-			Console.WriteLine("You answered with No");  
-		}  
-		else if (answer == "yes")  
-		{  
-			Console.WriteLine("You answered with Yes");  
-		}  
-		else  
-		{  
-			// What should happen when this point is reached? Ignored? If not,
-			// throw an InvalidOperationException.  
-		}  
-	}
-
 ### <a name="av1540"></a> Be reluctant with multiple `return` statements (AV1540) ![](/assets/images/2.png)
 One entry, one exit is a sound principle and keeps control flow readable. However, if the method body is very small and complies with guideline [AV1500](#av1500) then multiple return statements may actually improve readability over some central boolean flag that is updated at various points.
 
@@ -388,7 +341,7 @@ C# 4.0's named arguments have been introduced to make it easier to call COM comp
 
 	object[] myAttributes = type.GetCustomAttributes(typeof(MyAttribute), inherit: false);
 
-### <a name="av1561"></a> Don't declare signatures with more than 3 parameters (AV1561) ![](/assets/images/1.png)
+### <a name="av1561"></a> Don't declare signatures with more than 5 parameters (AV1561) ![](/assets/images/1.png)
 To keep constructors, methods, delegates and local functions small and focused, do not use more than three parameters. Do not use tuple parameters. Do not return tuples with more than two elements.
 
 If you want to use more parameters, use a structure or class to pass multiple arguments, as explained in the [Specification design pattern](http://en.wikipedia.org/wiki/Specification_pattern). 

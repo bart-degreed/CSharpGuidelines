@@ -9,8 +9,9 @@ sidebar:
 
 ### <a name="av2201"></a> Use C# type aliases instead of the types from the `System` namespace (AV2201) ![](/assets/images/1.png)
 For instance, use `object` instead of `Object`, `string` instead of `String`, and `int` instead of `Int32`. These aliases have been introduced to make the primitive types first class citizens of the C# language, so use them accordingly.
+Also when referring to static members of these types, use the alias, e.g. `int.Parse()` instead of `Int32.Parse()`.
 
-**Exception:** When referring to static members of those types, it is custom to use the full CLS name, e.g. `Int32.Parse()` instead of `int.Parse()`. The same applies to members that need to specify the type they return, e.g. `ReadInt32`, `GetUInt16`. 
+**Exception:** When declaring members that need to specify the type they return, use the full CLS name, e.g. `ReadInt32`, `GetUInt16`. 
 
 ### <a name="av2202"></a> Prefer language syntax over explicit calls to underlying implementations (AV2202) ![](/assets/images/1.png)
 Language syntax makes code more concise. The abstractions make later refactorings easier (and sometimes allow for extra optimizations).

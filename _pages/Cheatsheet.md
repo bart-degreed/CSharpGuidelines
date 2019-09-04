@@ -67,7 +67,7 @@ NOTE: Requires Markdown Extra. See http://michelf.ca/projects/php-markdown/extra
 <br/>
 **Maintainability**
 
-* Methods should not exceed 7 statements (AV1500)
+* Methods should not exceed 12 statements (AV1500)
 * Make all members `private` and types `internal sealed` by default (AV1501)
 * Avoid conditions with double negatives (AV1502)
 * Don't use "magic" numbers (AV1515)
@@ -81,15 +81,13 @@ NOTE: Requires Markdown Extra. See http://michelf.ca/projects/php-markdown/extra
 </td>
 <td class="column">
 * Always add a block after the keywords `if`, `else`, `do`, `while`, `for`, `foreach` and `case` (AV1535)
-* Always add a `default` block after the last `case` in a `switch` statement (AV1536)
-* Finish every `if`-`else`-`if` statement with an `else` clause (AV1537)
 * Be reluctant with multiple `return` statements (AV1540)
 * Don't use an `if`-`else` construct instead of a simple (conditional) assignment (AV1545)
 * Encapsulate complex expressions in a property, method or local function (AV1547)
 * Call the more overloaded method from other overloads (AV1551)
 * Only use optional arguments to replace overloads (AV1553)
 * Avoid using named arguments (AV1555)
-* Don't declare signatures with more than 3 parameters (AV1561)
+* Don't declare signatures with more than 5 parameters (AV1561)
 * Don't use `ref` or `out` parameters (AV1562)
 * Avoid signatures that take a `bool` flag (AV1564)
 * Prefer `is` patterns over `as` operations (AV1570)
@@ -181,8 +179,7 @@ NOTE: Requires Markdown Extra. See http://michelf.ca/projects/php-markdown/extra
 **Documentation**
 
 * Write comments and documentation in US English (AV2301)
-* Document all `public`, `protected` and `internal` types and members (AV2305)
-* Write XML documentation with other developers in mind (AV2306)
+* Consider only publicly exported types and members for documentation (AV2305)
 * Avoid inline comments (AV2310)
 * Only write comments to explain complex algorithms or decisions (AV2316)
 <br/>

@@ -56,9 +56,9 @@ sidebar:
 		    select product;
 
 - Start the LINQ statement with all the `from` expressions and don't interweave them with restrictions.
-- Add parentheses around every binary expression, but don't add parentheses around unary expressions. For example `if (!string.IsNullOrEmpty(str) && (str != "new"))`
+- Use parentheses around expressions only when needed. For example `if (!string.IsNullOrEmpty(str) && str != "new")`
 
-- Add an empty line between multi-line statements, between multi-line members, after the closing curly braces, between unrelated code blocks, and between the `using` statements of different root namespaces.
+- Add an empty line between multi-line statements, between multi-line members, after the closing curly braces, and between unrelated code blocks.
 
 ### <a name="av2402"></a> Order and group namespaces according to the company (AV2402) ![](/assets/images/3.png)
 
@@ -66,7 +66,6 @@ sidebar:
 	using System;
 	using System.Collections.Generic;
 	using System.Xml;
-	
 	// Then any other namespaces in alphabetic order
 	using AvivaSolutions.Business;
 	using AvivaSolutions.Standard;
@@ -79,14 +78,12 @@ Always place these directives at the top of the file, before any namespace decla
 ### <a name="av2406"></a> Place members in a well-defined order (AV2406) ![](/assets/images/1.png)
 Maintaining a common order allows other team members to find their way in your code more easily. In general, a source file should be readable from top to bottom, as if reading a book, to prevent readers from having to browse up and down through the code file.
 
-1. Private fields and constants
-2. Public constants
-3. Public static read-only fields
-4. Factory methods
-5. Constructors and the finalizer
-6. Events 
-7. Public properties
-8. Other methods and private properties in calling order
+1. Constants, static fields, then instance fields (grouped by visibility, from private to public)
+2. Static, then instance properties (grouped by visibility, from private to public)
+3. Static, then instance events (grouped by visibility, from private to public)
+4. Constructors in calling order
+5. Methods in calling order
+6. Nested types
 
 Declare local functions at the bottom of their containing method bodies (after all executable code).
 

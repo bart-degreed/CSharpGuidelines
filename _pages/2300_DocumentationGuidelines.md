@@ -9,11 +9,8 @@ sidebar:
 
 ### <a name="av2301"></a> Write comments and documentation in US English (AV2301) ![](/assets/images/1.png)
 
-### <a name="av2305"></a> Document all `public`, `protected` and `internal` types and members (AV2305) ![](/assets/images/2.png)
-Documenting your code allows Visual Studio, [Visual Studio Code](https://code.visualstudio.com/) or [Jetbrains Rider](https://www.jetbrains.com/rider/) to pop-up the documentation when your class is used somewhere else. Furthermore, by properly documenting your classes, tools can generate professionally looking class documentation.
-
-### <a name="av2306"></a> Write XML documentation with other developers in mind (AV2306) ![](/assets/images/2.png)
-Write the documentation of your type with other developers in mind. Assume they will not have access to the source code and try to explain how to get the most out of the functionality of your type.
+### <a name="av2305"></a> Consider only publicly exported types and members for documentation (AV2305) ![](/assets/images/2.png)
+Over time, documentation tends to deviate from the source code and becomes a maintenance burden. Only document the non-obvious, assuming knowledge of general patterns and practices.
 
 ### <a name="av2307"></a> Write MSDN-style documentation (AV2307) ![](/assets/images/3.png)
 Following the MSDN online help style and word choice helps developers find their way through your documentation more easily.
