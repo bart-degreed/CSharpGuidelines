@@ -237,7 +237,7 @@ NOTE: Requires Markdown Extra. See http://michelf.ca/projects/php-markdown/extra
 <table width="100%" class="footer">
 <tr>
  <td>
-   Dennis Doomen
+   Dennis Doomen, Bart Koelman
    Version %semver% (%commitdate%)
  </td>
  <td style="text-align:right">
