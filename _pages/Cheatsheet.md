@@ -159,7 +159,7 @@ NOTE: Requires Markdown Extra. See http://michelf.ca/projects/php-markdown/extra
 **Naming**
 
 * Use US English (AV1701)
-* Don't prefix fields (AV1705)
+* Don't prefix identifiers, except private fields (AV1705)
 * Don't use abbreviations (AV1706)
 * Name members, parameters and variables according to their meaning and not their type (AV1707)
 * Name types using nouns, noun phrases or adjective phrases (AV1708)
